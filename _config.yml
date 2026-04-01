@@ -1,0 +1,15 @@
+url: 'https://chrshd.github.io'
+baseurl: 'chrshd'
+
+title: 'Chris Hadfield'
+subtitle: 'Designer and Developer'
+
+postcss:
+  cache: false
+  config: postcss.config.js
+
+exclude:
+  - package.json
+  - postcss.config.js
+  - tailwind.config.js
+  - package-lock.json

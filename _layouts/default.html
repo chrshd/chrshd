@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  </head>
+  <body>
+
+<main id="main" class="
+            container mx-auto 
+            *:px-6 *:py-12 *:lg:py-24 *:relative
+            *:before:content-['']
+            *:before:absolute
+            *:before:top-0
+            *:before:left-1/2
+            *:before:-translate-x-1/2
+            *:before:w-screen
+            *:before:border-t-2
+            *:before:border-dotted
+            *:before:border-gray-400
+            *:before:pointer-events-none ">         
+            
+      {% if page.intro %}
+    <div class="grid lg:grid-cols-3 xl:grid-cols-4 opacity-100 translate-y-0" x-data="{ shown: false }" x-intersect="shown = true" :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+        <div class="lg:col-span-1">
+          <h1 class="font-semibold text-base">{{ site.title }}</h1>
+          {% assign subtitle = page.subtitle | default: site.subtitle %}
+          {% if subtitle %}
+          <p class="text-gray-500 mb-12 lg:mb-0">{{ subtitle }}</p>
+          {% endif %}
+        </div>
+        <div class="lg:col-span-2 xl:col-span-3 h3 font-light prose">
+          {{ page.intro | markdownify }}
+        </div>
+    </div>
+      {% endif %}
+      {% for section in page.sections %}
+
+    <div class="grid lg:grid-cols-3 xl:grid-cols-4 opacity-100 translate-y-0" x-data="{ shown: false }" x-intersect="shown = true" :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+        <h2 class="lg:self-start lg:sticky lg:top-10 lg:col-span-1 mb-12 lg:mb-0 text-gray-500 lg:pr-6 font-light text-base">
+   {{ section.heading }}
+</h2>
+
+<div class="lg:col-span-2 xl:col-span-3 h3 font-light prose">
+   {{ section.text | markdownify }}
+</div>
+
+                    </div>
+ {% endfor %}
+
+ </main>
+  </body>
+</html>
