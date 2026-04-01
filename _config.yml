@@ -1,8 +1,13 @@
-url: 'https://chrshd.github.io'
-baseurl: 'chrshd'
+url: ''
+baseurl: ''
 
 title: 'Chris Hadfield'
-subtitle: 'Designer and Developer'
+subtitle: 'Multidisciplinary Designer and Developer'
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
 
 postcss:
   cache: false

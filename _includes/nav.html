@@ -1,0 +1,27 @@
+{% assign is_home = page.url == "/" %}
+{% assign is_projects = page.url contains "/projects" %}
+{% assign is_cv = page.url contains "/cv" %}
+{% assign home_class = "text-gray-500 hover:text-gray-900" %}
+{% assign projects_class = "text-gray-500 hover:text-gray-900" %}
+{% assign cv_class = "text-gray-500 hover:text-gray-900" %}
+{% if is_home %}
+  {% assign home_class = "text-gray-900" %}
+{% endif %}
+{% if is_projects %}
+  {% assign projects_class = "text-gray-900" %}
+{% endif %}
+{% if is_cv %}
+  {% assign cv_class = "text-gray-900" %}
+{% endif %}
+
+<header class="container mx-auto p-8 pb-4 flex items-end justify-between">
+  <div>
+  <a class="font-semibold text-base text-gray-900 block" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+  <span class="text-gray-500">{{ site.subtitle }}</span>
+</div>
+  <nav class="flex items-center gap-6 text-sm">
+    <a class="{{ home_class }}" href="{{ "/" | relative_url }}">Home</a>
+    <a class="{{ projects_class }}" href="{{ "/projects/" | relative_url }}">Projects</a>
+    <a class="{{ cv_class }}" href="{{ "/cv/" | relative_url }}">CV</a>
+  </nav>
+</header>

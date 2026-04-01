@@ -8,6 +8,8 @@
   </head>
   <body>
 
+    {% include nav.html %}
+
 <main id="main" class="
             container mx-auto 
             *:px-6 *:py-12 *:lg:py-24 *:relative
@@ -22,29 +24,36 @@
             *:before:border-gray-400
             *:before:pointer-events-none ">         
             
-      {% if page.intro %}
-    <div class="grid lg:grid-cols-3 xl:grid-cols-4 opacity-100 translate-y-0" x-data="{ shown: false }" x-intersect="shown = true" :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
-        <div class="lg:col-span-1">
-          <h1 class="font-semibold text-base">{{ site.title }}</h1>
-          {% assign subtitle = page.subtitle | default: site.subtitle %}
-          {% if subtitle %}
-          <p class="text-gray-500 mb-12 lg:mb-0">{{ subtitle }}</p>
-          {% endif %}
-        </div>
-        <div class="lg:col-span-2 xl:col-span-3 h3 font-light prose">
-          {{ page.intro | markdownify }}
-        </div>
-    </div>
-      {% endif %}
+<div>
+      <h1 class="text-3xl font-light">{{ page.title }}</h1>
+               {% if page.intro %}
+ <p class="text-3xl font-light">{{ page.intro }}</p>
+    {% endif %}
+</div>
       {% for section in page.sections %}
 
-    <div class="grid lg:grid-cols-3 xl:grid-cols-4 opacity-100 translate-y-0" x-data="{ shown: false }" x-intersect="shown = true" :class="shown ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+    <div class="grid lg:grid-cols-3 xl:grid-cols-4">
         <h2 class="lg:self-start lg:sticky lg:top-10 lg:col-span-1 mb-12 lg:mb-0 text-gray-500 lg:pr-6 font-light text-base">
    {{ section.heading }}
 </h2>
 
 <div class="lg:col-span-2 xl:col-span-3 h3 font-light prose">
+   {% if section.text %}
    {{ section.text | markdownify }}
+   {% endif %}
+   {% if section.collection %}
+   {% assign collection_items = site[section.collection] %}
+   <ul class="mt-6 space-y-4">
+     {% for item in collection_items %}
+     <li>
+       <a class="font-semibold text-gray-900" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+       {% if item.summary %}
+       <p class="text-sm text-gray-500">{{ item.summary }}</p>
+       {% endif %}
+     </li>
+     {% endfor %}
+   </ul>
+   {% endif %}
 </div>
 
                     </div>
