@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
     </head>
 
-    <body class="bg-stone-200 text-stone-800 container mx-auto px-5 lg:px-10">
+    <body class="bg-emerald-50 text-slate-800 container mx-auto px-5 lg:px-10">
 
         {% include header.html %}
 
@@ -16,21 +16,21 @@
            <div class="
                 z-10 text-3xl font-light py-12 lg:py-24 relative 
                 after:content-[''] after:inset-0
-                after:bg-[radial-gradient(#d6d3d1_10%,transparent_10%),radial-gradient(#d6d3d1_10%,transparent_10%)] after:bg-[length:24px_24px] after:bg-[position:0_0,12px_12px]
+                after:bg-[radial-gradient(#bbf7d0_10%,transparent_10%),radial-gradient(#bbf7d0_10%,transparent_10%)] after:bg-[length:24px_24px] after:bg-[position:0_0,12px_12px]
                 after:absolute after:bottom-0 after:left-1/2 after:top-0
                 after:-translate-x-1/2 after:w-screen after:z-0" 
             >
                 {% if page.title %}
                     <h1 class="relative z-30 font-medium">
-                        <span class="bg-stone-200/60 ">
+                        <span class="bg-green-50/60 ">
                             {{ page.title }}
                         </span>
                     </h1>
                 {% endif %}
 
                 {% if page.intro %}
-                    <p class="md:w-2/3 z-20 font-medium relative text-stone-500">
-                       <span class="bg-stone-200/60 ">
+                    <p class="md:w-2/3 z-20 font-medium relative text-slate-500">
+                       <span class="bg-green-50/60 ">
                             {{ page.intro  }}
                         </span> 
                     </p>

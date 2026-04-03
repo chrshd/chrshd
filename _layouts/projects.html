@@ -5,22 +5,21 @@ layout: default
 {% for project in site.projects %}
     <div class="
         grid md:grid-cols-4 relative group px-0 transition duration-700 ease-out 
-        hover:bg-stone-300  
+        hover:bg-emerald-100  
         after:content-['']  
         after:absolute after:bottom-0 after:left-1/2
         after:-translate-x-1/2 after:w-screen
-        after:border-t-2 after:border-dotted after:border-stone-300"
-    >
-        <div class="col-span-3 flex flex-col justify-between py-8">
+        after:border-t-2 after:border-dotted after:border-slate-300"
+    >        
+        <img class="col-span-2 object-cover aspect-video w-1/2 md:w-full" src="{{ project.image | relative_url }}" alt="{{ page.title }}">
+
+        <div class="col-span-2 flex flex-col justify-between p-8">
             <h2 class="lg:text-2xl font-semibold underline underline-offset-8 decoration-dotted decoration-2 group-hover:decoration-0">
                 {{ project.title }}
             </h2>
                   
             {% include category-pills.html categories=project.categories %}
        </div> 
-
-        <img class="col-span-1 object-cover aspect-square w-1/2 md:w-full" src="{{ project.image | relative_url }}" alt="{{ page.title }}">
-
         <a class="absolute inset-0 z-10" href="{{ project.url | relative_url }}"></a>
     </div>
 {% endfor %}
