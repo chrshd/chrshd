@@ -1,10 +1,12 @@
 ---
-layout: default
-title: Example Project
-year: 2025
-role: Interaction Design, Front-end Development
-intro: |
-  A focused collaboration hub for small teams, combining scheduling, shared notes, and task routing in one interface.
+layout: page
+title: The University of Sheffield
+categories: 
+  - Project & delivery management
+  - Art direction
+  - Graphic design
+image: /assets/tuos.jpg
+
 sections:
   - heading: Overview
     text: |

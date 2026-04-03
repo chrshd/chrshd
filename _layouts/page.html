@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  </head>
-  <body>
+---
+layout: default
+---
 
-    {% include nav.html %}
+{% for section in page.sections %}
+    <div class="grid lg:grid-cols-3 xl:grid-cols-4 py-10 border-b-2 border-dotted border-stone-300">
+        <h2 class="lg:self-start lg:sticky lg:top-10 lg:col-span-1 mb-8 lg:mb-0 text-stone-500 lg:pr-6 font-light">
+            {{ section.heading }}
+        </h2>
 
-    <main class="container mx-auto px-6 pb-24">
-      <h1 class="text-3xl font-light mb-6">{{ page.title }}</h1>
-      {% endif %}
-      <div class="prose prose-slate max-w-none">
-        {{ content }}
-      </div>
-    </main>
-  </body>
-</html>
+        <div class="lg:col-span-2 font-light prose max-w-none">
+            {{ section.text | markdownify }}
+        </div>
+    </div>
+{% endfor %}
+
+  {% include category-pills.html categories=page.categories %}

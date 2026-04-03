@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 title: CV
 sections:
   - heading: Skills & Tools

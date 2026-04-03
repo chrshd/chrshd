@@ -1,0 +1,15 @@
+<header class="pb-4 pt-8 md:flex items-end justify-between">
+    <div class="mb-6 md:mb-0">
+        <a class="font-semibold block" href="{{ "/" | relative_url }}">
+            {{ site.title }}
+        </a>
+        <span class="text-stone-500">
+            {{ site.subtitle }}
+        </span>
+    </div>
+
+    <nav class="flex gap-6">
+        <a href="{{ "/projects/" | relative_url }}">Projects</a>
+        <a href="{{ "/cv/" | relative_url }}">CV</a>
+    </nav>
+</header>
