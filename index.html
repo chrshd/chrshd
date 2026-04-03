@@ -1,59 +1,68 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title> - Chris Hadfield</title>
-    <link rel="stylesheet" href="/chrshd/assets/css/main.css">
-  </head>
-  <body>
 
-    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>Heading 1 here - Chris Hadfield</title>
+        <link rel="stylesheet" href="/assets/css/main.css">
+    </head>
 
+    <body class="bg-stone-200 text-stone-800 container mx-auto px-5 lg:px-10">
 
+        <header class="pb-4 pt-8 md:flex items-end justify-between">
+    <div class="mb-6 md:mb-0">
+        <a class="font-semibold block" href="/">
+            Chris Hadfield
+        </a>
+        <span class="text-stone-500">
+            Multidisciplinary Designer and Developer
+        </span>
+    </div>
 
-
-
-
-
-
-
-<header class="container mx-auto p-8 pb-4 flex items-end justify-between">
-  <div>
-  <a class="font-semibold text-base text-gray-900 block" href="/chrshd/">Chris Hadfield</a>
-  <span class="text-gray-500">Multidisciplinary Designer and Developer</span>
-</div>
-  <nav class="flex items-center gap-6 text-sm">
-    <a class="text-gray-900" href="/chrshd/">Home</a>
-    <a class="text-gray-900" href="/chrshd/projects/">Projects</a>
-    <a class="text-gray-900" href="/chrshd/cv/">CV</a>
-  </nav>
+    <nav class="flex gap-6">
+        <a href="/projects/">Projects</a>
+        <a href="/cv/">CV</a>
+    </nav>
 </header>
 
 
-<main id="main" class="
-            container mx-auto 
-            *:px-6 *:py-12 *:lg:py-24 *:relative
-            *:before:content-['']
-            *:before:absolute
-            *:before:top-0
-            *:before:left-1/2
-            *:before:-translate-x-1/2
-            *:before:w-screen
-            *:before:border-t-2
-            *:before:border-dotted
-            *:before:border-gray-400
-            *:before:pointer-events-none ">         
-            
-<div>
-      <h1 class="text-3xl font-light"></h1>
-               
- <p class="text-3xl font-light">With 20 years' experience in print and digital design and web development, I have worked with a wide range of clients in the private, public, and third sectors. I have a passion for working with people to create solutions that are user-centered and accessible.
-</p>
-    
-</div>
-      
+        <main>
+           <div class="
+                z-10 text-3xl font-light py-12 lg:py-24 relative 
+                after:content-[''] after:inset-0
+                after:bg-[radial-gradient(#d6d3d1_10%,transparent_10%),radial-gradient(#d6d3d1_10%,transparent_10%)] after:bg-[length:24px_24px] after:bg-[position:0_0,12px_12px]
+                after:absolute after:bottom-0 after:left-1/2 after:top-0
+                after:-translate-x-1/2 after:w-screen after:z-0" 
+            >
+                
+                    <h1 class="relative z-30 font-medium">
+                        <span class="bg-stone-200/60 ">
+                            Heading 1 here
+                        </span>
+                    </h1>
+                
 
- </main>
-  </body>
+                
+                    <p class="md:w-2/3 z-20 font-medium relative text-stone-500">
+                       <span class="bg-stone-200/60 ">
+                            With 20 years experience in print and digital design and web development, I have worked with a wide range of clients in the private, public, and third sectors. I have a passion for working with people to create solutions that are user-centered and accessible.
+
+                        </span> 
+                    </p>
+                
+
+            </div>
+            
+            
+
+        </main>
+
+        <footer class="pt-20 pb-8 md:flex items-end justify-between text-stone-500 text-sm">
+    Made with Jekyll and Tailwind and hosted on GitHub Pages. There are no external requests or tracking cookies (the Google font Inter is embedded locally).
+</footer>
+
+
+    </body>
+
 </html>
