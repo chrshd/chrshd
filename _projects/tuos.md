@@ -5,7 +5,7 @@ categories:
   - Project & delivery management
   - Art direction
   - Graphic design
-image: /assets/tuos.jpg
+image: /assets/tuos.webp
 
 sections:
   - heading: Overview
