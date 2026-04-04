@@ -8,8 +8,18 @@
         </span>
     </div>
 
-    <nav class="flex gap-6">
-        <a href="{{ "/projects/" | relative_url }}">Projects</a>
-        <a href="{{ "/cv/" | relative_url }}">CV</a>
+    <nav>
+        <ul class="list-none flex gap-6">
+            {% for nav in site.data.navigation %}
+                <li 
+                    class="
+                        hover:text-teal-800 hover:underline hover:decoration-2 underline-offset-8 decoration-dotted decoration-teal-800
+                        {% if nav.url == page.url %} underline decoration-2 text-teal-800 {% endif %}"
+                    >
+                    <a href="{{ nav.url }}">{{ nav.text }}</a>
+                </li>
+            {% endfor %}
+        </ul>
     </nav>
+
 </header>

@@ -3,20 +3,13 @@ layout: default
 ---
 
 {% for project in site.projects %}
-    <div class="
-        grid sm:grid-cols-2 mb-4 sm:mb-0 relative group px-0 transition duration-700 ease-out  overflow-hidden
-        hover:bg-emerald-100  
-        after:content-['']  
-        after:absolute after:bottom-0 after:left-1/2
-        after:-translate-x-1/2 after:w-screen
-        after:border-t-2 after:border-dotted after:border-slate-300"
-    >       
+    <div class="grid sm:grid-cols-2 relative group px-0 transition duration-700 ease-out hover:bg-teal-100">       
         <div class="aspect-video overflow-hidden">
             <img src="{{ project.image | relative_url }}" alt="{{ page.title }}">
         </div>
 
         <div class="flex flex-col justify-between p-4 md:p-8">
-            <h2 class="lg:text-2xl font-semibold leading-8 underline underline-offset-8 decoration-dotted decoration-2 group-hover:decoration-0">
+            <h2 class="lg:text-2xl font-semibold leading-8 underline underline-offset-8 decoration-teal-800 decoration-dotted decoration-2 group-hover:decoration-0">
                 {{ project.title }}
             </h2>
                   
