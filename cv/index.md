@@ -2,9 +2,6 @@
 layout: page
 title: CV
 sections:
-  - heading: new section
-    text: |
-      styuff
   - heading: Skills & Tools
     text: |
       **Design**  
