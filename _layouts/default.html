@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>{{ page.title }} - {{ site.title }}</title>
+        <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    </head>
+
+    <body class="bg-emerald-50 text-slate-800 container mx-auto px-6 lg:px-12">
+
+        {% include header.html %}
+
+        <main class="grid gap-6 md:gap-12">
+           <div class="
+                z-10 font-light mb-6 py-12 lg:py-24 relative 
+                after:content-[''] after:inset-0
+                after:bg-[radial-gradient(#a7f3d0_10%,transparent_10%),radial-gradient(#a7f3d0_10%,transparent_10%)] after:bg-[length:24px_24px] after:bg-[position:0_0,12px_12px]
+                after:absolute after:bottom-0 after:left-1/2 after:top-0
+                after:-translate-x-1/2 after:w-screen after:z-0" 
+            >
+                {% if page.title %}
+                    <h1 class="relative text-3xl z-30 font-medium">
+                        <span class="bg-green-50/60 ">
+                            {{ page.title }}
+                        </span>
+                    </h1>
+                {% endif %}
+
+                {% if page.intro %}
+                    <p class="md:w-2/3 z-20 text-3xl font-medium relative text-slate-500">
+                       <span class="bg-green-50/60 ">
+                            {{ page.intro  }}
+                        </span> 
+                    </p>
+                {% endif %}
+                {% if page.categories %}
+                <div class="mt-6">
+
+        {% include category-pills.html categories=page.categories %}
+        </div>
+{% endif %}
+{% if page.external_url %}
+    <a class="relative z-30 inline-block rounded-md px-4 py-2 bg-teal-400 font-semibold transition ease-in-out hover:bg-teal-300 mt-6" href="{{ page.external_url }}" target="_blank" rel="noopener">
+        Visit site
+    </a>
+{% endif %}
+            </div>
+            
+            {{ content }}
+        </main>
+
+        {% include footer.html %}
+
+    </body>
+
+</html>

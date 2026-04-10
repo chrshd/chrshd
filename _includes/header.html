@@ -1,0 +1,25 @@
+<header class="pb-4 pt-8 md:flex items-end justify-between">
+    <div class="mb-6 md:mb-0">
+        <a class="font-semibold block" href="{{ "/" | relative_url }}">
+            {{ site.title }}
+      
+        <span class="text-slate-500 block">
+            {{ site.subtitle }}
+        </span>  </a>
+    </div>
+
+    <nav>
+        <ul class="list-none flex gap-6">
+            {% for nav in site.data.navigation %}
+                <li 
+                    class="
+                        font-semibold hover:underline hover:decoration-2 underline-offset-8 decoration-dotted
+                        {% if nav.url == page.url %} underline decoration-2 {% endif %}"
+                    >
+                    <a href="{{ nav.url }}">{{ nav.text }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+</header>
