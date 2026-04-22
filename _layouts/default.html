@@ -29,24 +29,10 @@
                     </h1>
                 {% endif %}
 
-                {% if page.intro %}
-                    <p class="lg:w-2/3 z-20 text-2xl lg:text-3xl font-medium relative text-stone-500">
-                       <span class="bg-amber-50 ">
-                            {{ page.intro  }}
-                        </span> 
-                    </p>
-                {% endif %}
-
                 {% if page.categories %}
                     <div class="mt-6">
                         {% include category-pills.html categories=page.categories %}
                     </div>
-                {% endif %}
-                                
-                {% if page.external_url %}
-                    <a class="relative z-30 inline-block rounded-md px-4 py-2 bg-amber-500 font-semibold transition ease-in-out hover:bg-amber-300 mt-6" href="{{ page.external_url }}" target="_blank" rel="noopener">
-                        Visit site
-                    </a>
                 {% endif %}
             </div>
             

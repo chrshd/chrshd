@@ -28,7 +28,8 @@ layout: default
     <h2 class="font-semibold relative text-lg mb-12">More projects</h2>
 
     <div class="grid grid-cols-2 lg:grid-cols-3 gap-2 gap-y-6">
-        {% for project in site.projects %}
+        {% assign sorted_projects = site.projects | sort: "order" %}
+        {% for project in sorted_projects %}
             {% unless project.url == page.url %}
                 <div class="relative group">  
                     <img class="aspect-group-hover:opacity-90 transition mb-3" src="{{ project.thumbnail | relative_url }}">

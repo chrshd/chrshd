@@ -1,7 +1,7 @@
 ---
 layout: page
+order: 4
 title: Central Processing Unit
-external_url: 
 categories: 
   - Project & delivery management
   - Creative direction

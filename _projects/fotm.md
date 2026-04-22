@@ -1,5 +1,6 @@
 ---
 layout: page
+order: 2
 title: Festival of the Mind 
 external_url: 
 categories:   
@@ -23,11 +24,10 @@ sections:
         - Managed rollout across large-format outdoor media and digital channels, applying the identity across billboards, buses, exhibition signage, programmes, apparel, and digital marketing outputs, with a focus on clarity, accessibility, legibility, and navigation to maximise public reach and engagement
         - Iteratively refined the identity across successive editions to improve accessibility, clarity, and programme communication
 
-    - image: 
-      - /assets/fotm-1.webp 
-      - /assets/fotm-6.webp
+    - image:       
+      - /assets/fotm-2.webp      
       - /assets/fotm-3.webp
-      - /assets/fotm-2.webp
+      - /assets/fotm-6.webp
       - /assets/fotm-5.webp
       - /assets/fotm-4.webp
 

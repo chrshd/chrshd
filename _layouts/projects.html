@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-
-{% for project in site.projects %}
+{% assign sorted_projects = site.projects | sort: "order" %}
+{% for project in sorted_projects %}
     <div class="grid md:grid-cols-2 relative group transition duration-700 ease-out">  
         <img class="group-hover:opacity-90 transition" src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}">
 
